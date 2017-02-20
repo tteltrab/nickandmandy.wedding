@@ -10,6 +10,7 @@
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-armadillo": "^3.6.0",
-    "sass-toolkit": "^2.10.2"
+    "sass-toolkit": "^2.10.2",
+    "susy": "^2.2.12"
   }
 }
