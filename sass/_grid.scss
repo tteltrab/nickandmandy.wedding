@@ -6,11 +6,6 @@ $susy: (
   columns: $cols,
   gutter-position: inside,
   container: 90%,
-  debug: (
-    image: show,
-    output: overlay,
-    toggle: bottom right
-  )
 );
 
 // this only works kind of well for the 8-column grid at the moment
