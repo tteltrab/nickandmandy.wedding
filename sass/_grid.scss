@@ -1,0 +1,40 @@
+@import 'susy';
+
+$cols: 12;
+
+$susy: (
+  columns: $cols,
+  gutter-position: inside,
+  container: 90%,
+  debug: (
+    image: show,
+    output: overlay,
+    toggle: bottom right
+  )
+);
+
+// this only works kind of well for the 8-column grid at the moment
+%grid-half {
+  @include span($cols/2 of $cols);
+}
+
+%grid-nest {
+  @include span($cols of $cols nest);
+}
+
+%grid-full {
+  @include span($cols of $cols);
+}
+
+// hack to come back to which "centers", providing extra padding
+%grid-half-padded {
+  @include push(2 of 16);
+  @include span(5 of 16);
+}
+
+// sort of hack to take element out of grid float and center it
+%grid-center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}

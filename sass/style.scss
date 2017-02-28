@@ -1,85 +1,26 @@
 @import 'toolkit/reset';
 @import 'toolkit';
-@import 'susy';
+@import 'colors';
+@import 'grid';
+@import 'header';
+@import 'band';
 
-$susy: (
-  columns: 12,
-  gutters: 1 / 4,
-  gutter-position: inside,
-);
-
-$total-columns: 10;
-$column-width: 4em;
-$gutter-width: 1em;
-$grid-padding: 1em;
-
-$banner-blue: rgba(112, 167, 178, .15);
-$banner-grey: rgba(16, 16, 16, .75);
-$text-color-light: #fff;
-$text-color-dark: #000;
-$text-color-blue: #70a7b2;
-$section-padding: 6rem;
-$inner-padding: 1rem;
-
-%header {
-  @include susy-media(30rem) {
-    font-size: 3rem;
-  }
-
-  font-size: 2rem;
-  padding-bottom: $inner-padding;
-  text-transform: uppercase;
+body {
+  line-height: 1.5em;
+  overflow-x: hidden;
 }
 
-main > div {
-  &:nth-child(2n + 3) {
-    background-color: $banner-blue;
-  }
-}
-
-.band {
-  @include container(90%);
-  @include susy-media(30rem) {
-    padding: $section-padding 0;
-  }
-
-  padding: $section-padding / 2 0;
-
-  h2 {
-    @extend %header;
-  }
-
-  h3 {
-    color: $text-color-blue;
-    font-size: 1.5rem;
-    padding-bottom: $inner-padding;
-    text-transform: uppercase;
-  }
-
-  a,
-  p {
-    display: block;
-    padding-bottom: $inner-padding;
-  }
-
-  header {
-    @include span(12 of 12 nest);
-
-    p {
-      @include span(6 of 12);
-    }
-
-    h2 {
-      @include span(12 of 12);
-    }
-  }
+main {
+  @include container;
 }
 
 .splash {
+  @include bleed-x(10%);
+
   align-items: center;
   background-color: $banner-grey;
   // sass-lint:disable no-url-domains,no-url-protocols
-  background-image: url('//res.cloudinary.com/nickandmandy/image/upload/c_scale,co_rgb:101010,e_colorize:75,o_100,fl_progressive,q_auto:low/v1487574878/venue.jpg');
+  background-image: url('https://res.cloudinary.com/nickandmandy/image/upload/c_scale,co_rgb:101010,e_colorize:75,o_100,fl_progressive,q_auto:low/v1487574878/venue.jpg');
   // sass-lint:enable no-url-domains,no-url-protocols
   background-position: center;
   background-repeat: no-repeat;
@@ -90,7 +31,7 @@ main > div {
   text-align: center;
 
   &--header {
-    @extend %header;
+    @include header(3rem);
     letter-spacing: .3rem;
   }
 
@@ -98,16 +39,13 @@ main > div {
     font-size: 1rem;
     letter-spacing: .2rem;
   }
+
+  &--content {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .top-level {
   display: none;
-}
-
-.hotel {
-  @include span(6 of 12);
-}
-
-.hotels {
-  @include span(12 of 12 nest);
 }

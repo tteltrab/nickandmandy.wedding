@@ -1,0 +1,8 @@
+@mixin header($font-size) {
+  @include susy-media(30rem) {
+    font-size: $font-size;
+  }
+  font-size: .625 * $font-size;
+  padding-bottom: $inner-padding;
+  text-transform: uppercase;
+}
