@@ -35,6 +35,7 @@ main {
 .splash {
   @include bleed-x(10%);
 
+  align-items: center;
   background-color: $banner-grey;
   // sass-lint:disable no-url-domains,no-url-protocols
   background-image: url('https://res.cloudinary.com/nickandmandy/image/upload/c_scale,co_rgb:101010,e_colorize:75,o_100,fl_progressive,q_auto:low/v1487574878/venue.jpg');
@@ -43,7 +44,8 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   color: $text-color-light;
-  min-height: calc(65vh);
+  display: flex;
+  min-height: calc(75vh);
   text-align: center;
 
   &--header {
@@ -60,7 +62,6 @@ main {
   &--content {
     margin-left: auto;
     margin-right: auto;
-    padding-top: $section-padding;
   }
 }
 
