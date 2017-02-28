@@ -4,6 +4,7 @@
 @import 'grid';
 @import 'header';
 @import 'band';
+@import 'button';
 
 body {
   overflow-x: hidden;
@@ -19,10 +20,10 @@ main {
 
 .top-text {
   color: $text-color-blue;
-  margin-top: 2 * $inner-padding;
+  font-size: 1.4rem;
   position: absolute;
   text-align: center;
-  text-transform: uppercase;
+  top: $inner-padding;
   width: 100%;
 }
 
@@ -55,10 +56,26 @@ main {
   &--body {
     font-size: 1rem;
     letter-spacing: .2rem;
+    margin-bottom: $inner-padding;
   }
 
   &--content {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.bookings {
+  @extend %grid-nest;
+  display: flex;
+
+  &--info {
+    display: inline-block;
+    padding-bottom: $inner-padding;
+  }
+
+  &--phone {
+    display: inline-block;
+    padding: $inner-padding 0;
   }
 }

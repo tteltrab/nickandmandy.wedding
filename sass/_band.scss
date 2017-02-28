@@ -3,7 +3,7 @@ $inner-padding: 1.4rem;
 
 .band {
   @include bleed-x(10%);
-  @include susy-media(30rem) {
+  @include susy-media(40rem) {
     padding-bottom: $section-padding;
     padding-top: $section-padding;
   }

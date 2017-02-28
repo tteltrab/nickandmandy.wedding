@@ -1,0 +1,39 @@
+$button-color: #000;
+$button-inverse-color: #fff;
+
+%button {
+  border-radius: 300px;
+  border-style: solid;
+  border-width: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: .8rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: color .2s ease-in-out, background-color .2s ease-in-out;
+}
+
+.button {
+  @extend %button;
+  border-color: $button-color;
+  color: $button-color;
+
+  &:hover {
+    background-color: $button-color;
+    color: $button-inverse-color;
+  }
+}
+
+.button--inverse {
+  @extend %button;
+  border-color: $button-inverse-color;
+  color: $button-inverse-color;
+
+  &:hover {
+    background-color: $button-inverse-color;
+    color: $button-color;
+  }
+}
