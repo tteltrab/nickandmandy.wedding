@@ -1,7 +1,7 @@
 $header-gray: rgba(28, 13, 10, .9);
 
 @mixin header($font-size, $color: $header-gray) {
-  @include susy-media(40rem) {
+  @include breakpoint($break-sm) {
     font-size: $font-size;
   }
   color: $color;

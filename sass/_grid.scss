@@ -28,6 +28,7 @@ $susy: (
 
 // hack to come back to which "centers", providing extra padding on left/right
 %grid-half-padded {
+  @extend %grid-half;
 
   @include breakpoint ($break-sm) {
     @include push(1 of 13);
