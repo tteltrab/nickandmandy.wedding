@@ -76,18 +76,18 @@ main {
 
 .bookings {
   &--info {
-    display: inline-block;
+    display: block;
     padding-bottom: $inner-padding;
   }
 
   &--phone {
-    display: inline-block;
+    display: block;
     padding: $inner-padding 0;
   }
 }
 
 [property='schema:name'] {
-  display: inline-block;
+  display: block;
   font-size: 1.4rem;
   padding-bottom: $inner-padding;
 }
