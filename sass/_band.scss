@@ -10,9 +10,14 @@
   padding-top: $section-padding / 2;
 
   &--header {
-    @include header(3rem);
-
+    $header-size: 3rem;
+    @include header($header-size);
     text-align: center;
+
+    &--dark {
+      @include header($header-size, $text-color-light);
+      text-align: center;
+    }
   }
 
   &--sub-header {
@@ -51,6 +56,11 @@
 
   &:nth-child(2n + 3) {
     background-color: $banner-blue;
+  }
+
+  &.dark {
+    background-color: $banner-redish;
+    color: $text-color-light;
   }
 }
 

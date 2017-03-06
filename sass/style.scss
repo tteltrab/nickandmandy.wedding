@@ -1,7 +1,9 @@
 @import 'toolkit/reset';
 @import 'toolkit';
 @import 'breakpoint';
+@import './lightgallery.min.css';
 @import 'colors';
+@import 'lg-overrides';
 @import 'grid';
 @import 'header';
 @import 'band';
@@ -88,4 +90,10 @@ main {
   display: inline-block;
   font-size: 1.4rem;
   padding-bottom: $inner-padding;
+}
+
+.photo-grid {
+  @include gallery(4 of 12);
+
+  margin-bottom: 1 / 12 * 10%;
 }
