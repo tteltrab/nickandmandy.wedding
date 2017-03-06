@@ -47,7 +47,7 @@ main {
   align-items: center;
   background-color: $banner-redish;
   // sass-lint:disable no-url-domains,no-url-protocols
-  background-image: url('https://res.cloudinary.com/nickandmandy/image/upload/c_scale,h_1600,co_rgb:281310,e_colorize:75,o_100,fl_progressive,q_auto:low/v1488800757/20160703_125227_gcanxe.jpg');
+  background-image: url('https://res.cloudinary.com/nickandmandy/image/upload/c_scale,h_1600,co_rgb:281310,e_colorize:75,o_100,fl_progressive,q_auto:low/v1488800757/venue-2.jpg');
   // sass-lint:enable no-url-domains,no-url-protocols
   background-position: center;
   background-repeat: no-repeat;
@@ -95,5 +95,5 @@ main {
 .photo-grid {
   @include gallery(4 of 12);
 
-  margin-bottom: 1 / 12 * 10%;
+  margin-bottom: 1.1%;
 }
