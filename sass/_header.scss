@@ -1,8 +1,13 @@
-@mixin header($font-size) {
+$header-gray: rgba(28, 13, 10, .9);
+
+@mixin header($font-size, $color: $header-gray) {
   @include susy-media(40rem) {
     font-size: $font-size;
   }
+  color: $color;
+  font-family: 'PT Sans', sans-serif;
   font-size: .625 * $font-size;
+  letter-spacing: .1rem;
   padding-bottom: $inner-padding;
   text-transform: uppercase;
 }

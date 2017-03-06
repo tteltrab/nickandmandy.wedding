@@ -8,6 +8,9 @@
 @import 'button';
 
 body {
+  color: $text-gray;
+  font-family: 'Arvo', serif;
+  font-size: 1.2em;
   overflow-x: hidden;
 }
 
@@ -15,13 +18,16 @@ p {
   line-height: 1.4rem;
 }
 
+a {
+  font-family: 'PT Sans', sans-serif;
+}
+
 main {
   @include container;
 }
 
 .top-text {
-  color: $text-color-blue;
-  font-size: 1.4rem;
+  @include header(1.4rem, $text-color-blue);
   position: absolute;
   text-align: center;
   top: $inner-padding;
@@ -50,12 +56,12 @@ main {
   text-align: center;
 
   &--header {
-    @include header(3rem);
+    @include header(3rem, white);
     letter-spacing: .3rem;
   }
 
   &--body {
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: .2rem;
     margin-bottom: $inner-padding;
   }
@@ -76,4 +82,10 @@ main {
     display: inline-block;
     padding: $inner-padding 0;
   }
+}
+
+[property="schema:name"] {
+  display: inline-block;
+  font-size: 1.4rem;
+  padding-bottom: $inner-padding;
 }

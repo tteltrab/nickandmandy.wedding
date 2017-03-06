@@ -16,8 +16,7 @@
   }
 
   &--sub-header {
-    @include header(1.5rem);
-    color: $text-color-blue;
+    @include header(1.5rem, $text-color-blue);
     text-align: center;
   }
 
