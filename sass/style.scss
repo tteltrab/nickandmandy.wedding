@@ -43,7 +43,7 @@ main {
   @include bleed-x(10%);
 
   align-items: center;
-  background-color: $banner-grey;
+  background-color: $banner-redish;
   // sass-lint:disable no-url-domains,no-url-protocols
   background-image: url('https://res.cloudinary.com/nickandmandy/image/upload/c_scale,co_rgb:281310,e_colorize:75,o_100,fl_progressive,q_auto:low/v1487574878/venue.jpg');
   // sass-lint:enable no-url-domains,no-url-protocols
