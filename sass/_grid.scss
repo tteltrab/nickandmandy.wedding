@@ -1,6 +1,10 @@
 @import 'susy';
 
 $cols: 12;
+$break-sm: 600px;
+
+$section-padding: 5rem;
+$inner-padding: 1.4rem;
 
 $susy: (
   columns: $cols,
@@ -8,26 +12,30 @@ $susy: (
   container: 90%,
 );
 
-// this only works kind of well for the 8-column grid at the moment
 %grid-half {
-  @include span($cols/2 of $cols);
+  &:not(:last-child) {
+    margin-bottom: 2 * $inner-padding;
+  }
+
+  @include breakpoint ($break-sm) {
+    @include span($cols/2 of $cols);
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 
-%grid-nest {
-  @include span($cols of $cols nest);
-}
-
-%grid-full {
-  @include span($cols of $cols);
-}
-
-// hack to come back to which "centers", providing extra padding
+// hack to come back to which "centers", providing extra padding on left/right
 %grid-half-padded {
-  @include push(2 of 16);
-  @include span(5 of 16);
+
+  @include breakpoint ($break-sm) {
+    @include push(1 of 13);
+    @include span(5 of 13);
+  }
 }
 
-// sort of hack to take element out of grid float and center it
+// sort of hack to take element out of grid, float, and center it
 %grid-center {
   float: none;
   margin-left: auto;

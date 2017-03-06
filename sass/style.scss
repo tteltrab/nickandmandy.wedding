@@ -1,5 +1,6 @@
 @import 'toolkit/reset';
 @import 'toolkit';
+@import 'breakpoint';
 @import 'colors';
 @import 'grid';
 @import 'header';
@@ -66,9 +67,6 @@ main {
 }
 
 .bookings {
-  @extend %grid-nest;
-  display: flex;
-
   &--info {
     display: inline-block;
     padding-bottom: $inner-padding;

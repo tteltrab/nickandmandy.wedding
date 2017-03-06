@@ -12,5 +12,8 @@
     "gulp-armadillo": "^3.6.0",
     "sass-toolkit": "^2.10.2",
     "susy": "^2.2.12"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.1"
   }
 }
