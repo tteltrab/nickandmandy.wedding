@@ -1,6 +1,6 @@
 @import 'susy';
 
-$cols: 12;
+$cols: 13;
 $break-sm: 600px;
 
 $section-padding: 5rem;
@@ -18,7 +18,7 @@ $susy: (
   }
 
   @include breakpoint ($break-sm) {
-    @include span($cols/2 of $cols);
+    @include span($cols/2);
 
     &:not(:last-child) {
       margin-bottom: 0;
@@ -31,8 +31,8 @@ $susy: (
   @extend %grid-half;
 
   @include breakpoint ($break-sm) {
-    @include push(1 of 13);
-    @include span(5 of 13);
+    @include push(1);
+    @include span(5);
   }
 }
 

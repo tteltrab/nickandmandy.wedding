@@ -11,7 +11,7 @@
 
 body {
   color: $text-gray;
-  font-family: 'Arvo', serif;
+  font-family: Arvo, serif;
   font-size: 1.2em;
   overflow-x: hidden;
 }
@@ -106,6 +106,24 @@ main {
         visibility: visible;
       }
     }
+  }
+}
+
+.info-row {
+  overflow: auto;
+  padding: $inner-padding 0;
+
+  &--header {
+    @include header(1.5rem, $text-color-blue);
+    @include push(1 of 13);
+    @include span(2 of 13);
+
+    padding-top: 2px;
+  }
+
+  &--content {
+    @include push(1 of 13);
+    @include span(8 of 13);
   }
 }
 
