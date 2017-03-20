@@ -81,16 +81,39 @@ main {
   }
 
   &--phone {
-    display: block;
+    color: $text-gray;
+    display: inline-block;
     padding: $inner-padding 0;
+    position: relative;
+    text-decoration: none;
+
+    &::before {
+      background-color: $text-gray;
+      bottom: calc(#{$inner-padding} - 4px);
+      content: '';
+      height: 2px;
+      left: 0;
+      position: absolute;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out 0s, visibility .3s ease-in-out 0s;
+      visibility: hidden;
+      width: 100%;
+    }
+
+    &:hover {
+      &::before {
+        transform: scaleX(1);
+        visibility: visible;
+      }
+    }
   }
 }
 
 [property='schema:name'] {
   display: block;
   font-size: 1.4rem;
-  padding-bottom: $inner-padding;
   letter-spacing: 2px;
+  padding-bottom: $inner-padding;
   text-transform: uppercase;
 }
 
