@@ -62,6 +62,14 @@
     background-color: $banner-redish;
     color: $text-color-light;
   }
+
+  &.end {
+    background-color: $banner-greenish;
+    color: $text-color-light;
+    padding-bottom: $inner-padding;
+    padding-top: $inner-padding;
+    text-align: center;
+  }
 }
 
 .band-split {
