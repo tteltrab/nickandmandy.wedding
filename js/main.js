@@ -1,3 +1,3 @@
 import "./lightgallery.min.js";
-
-lightGallery(document.getElementById('lightGallery'));
+import "./googlemaps.js";
+import "./setup.js";

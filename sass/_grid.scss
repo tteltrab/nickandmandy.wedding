@@ -18,7 +18,7 @@ $susy: (
   @include breakpoint ($break-sm) {
     @include span($cols/2);
 
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       margin-bottom: 0;
     }
   }
@@ -74,7 +74,7 @@ $susy: (
   margin-left: auto;
   margin-right: auto;
 
-  &:not(:last-child) {
+  &:not(:last-of-type) {
     margin-bottom: $inner-padding;
   }
 
@@ -82,7 +82,7 @@ $susy: (
     @include push(1);
     @include span(5);
 
-    &:not(:last-child) {
+    &:not(:last-of-type) {
       margin-bottom: 0;
     }
   }

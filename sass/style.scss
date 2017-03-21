@@ -196,3 +196,10 @@ main {
 .details-header {
   padding: 0 0 .5 * $inner-padding;
 }
+
+.map {
+  @include push(1 of 13);
+  @include span(11);
+  height: 15em;
+  margin-top: 1.5 * $inner-padding;
+}
