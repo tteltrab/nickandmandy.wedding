@@ -124,19 +124,24 @@ main {
 
   &--header {
     @include header(1.5rem, $text-color-blue);
-    @include push(1 of 13);
-    @include span(2 of 13);
 
     padding-top: 2px;
   }
 
-  &--content {
-    @include push(1 of 13);
-    @include span(8 of 13);
-  }
-
   &:not(:last-child) {
     padding-bottom: $inner-padding;
+  }
+
+  @include breakpoint ($break-sm) {
+    &--header {
+      @include push(1 of 13);
+      @include span(2 of 13);
+    }
+
+    &--content {
+      @include push(1 of 13);
+      @include span(8 of 13);
+    }
   }
 }
 
