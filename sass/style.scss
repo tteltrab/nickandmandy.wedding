@@ -63,6 +63,7 @@ main {
 
   &--body {
     @include header(1.2rem, white);
+    font-family: Arvo, serif;
   }
 
   &--content {
