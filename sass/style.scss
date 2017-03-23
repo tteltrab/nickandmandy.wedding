@@ -73,21 +73,24 @@ main {
 }
 
 .bookings {
+  $bookings-padding: .5 * $inner-padding;
+
   &--info {
     display: block;
-    padding-bottom: $inner-padding;
+    padding-bottom: $bookings-padding;
   }
 
   &--phone {
+
     color: $text-gray;
     display: inline-block;
-    padding: $inner-padding 0;
+    padding: $bookings-padding 0;
     position: relative;
     text-decoration: none;
 
     &::before {
       background-color: $text-gray;
-      bottom: calc(#{$inner-padding} - 4px);
+      bottom: calc(#{$bookings-padding} - 4px);
       content: '';
       height: 2px;
       left: 0;
@@ -107,9 +110,17 @@ main {
   }
 }
 
+[property='schema:name'] {
+  @include header(1.4rem);
+  display: block;
+  font-family: Arvo, serif;
+  letter-spacing: .1em;
+  padding-bottom: .5 * $inner-padding;
+  text-transform: uppercase;
+}
+
 .info-row {
   overflow: auto;
-  padding: $inner-padding 0;
 
   &--header {
     @include header(1.5rem, $text-color-blue);
@@ -123,14 +134,10 @@ main {
     @include push(1 of 13);
     @include span(8 of 13);
   }
-}
 
-[property='schema:name'] {
-  display: block;
-  font-size: 1.4rem;
-  letter-spacing: 2px;
-  padding-bottom: $inner-padding;
-  text-transform: uppercase;
+  &:not(:last-child) {
+    padding-bottom: $inner-padding;
+  }
 }
 
 .photo-grid {
