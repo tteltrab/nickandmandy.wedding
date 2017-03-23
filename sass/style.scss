@@ -59,13 +59,10 @@ main {
 
   &--header {
     @include header(3rem, white);
-    letter-spacing: .3rem;
   }
 
   &--body {
-    font-size: 1.2rem;
-    letter-spacing: .2rem;
-    margin-bottom: $inner-padding;
+    @include header(1.2rem, white);
   }
 
   &--content {
