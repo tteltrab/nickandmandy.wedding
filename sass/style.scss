@@ -12,8 +12,12 @@
 body {
   color: $text-gray;
   font-family: Arvo, serif;
-  font-size: 1.1em;
+  font-size: 1em;
   overflow-x: hidden;
+
+  @include breakpoint($break-sm) {
+    font-size: 1.1em;
+  }
 }
 
 p {
@@ -124,8 +128,6 @@ main {
 
   &--header {
     @include header(1.5rem, $text-color-blue);
-
-    padding-top: 2px;
   }
 
   &:not(:last-child) {
@@ -136,6 +138,8 @@ main {
     &--header {
       @include push(1 of 13);
       @include span(2 of 13);
+
+      padding-top: 5px;
     }
 
     &--content {
@@ -158,4 +162,8 @@ main {
 
 .crate-and-barrel {
   padding: 15px;
+}
+
+.details-header {
+  padding-bottom: .5 * $inner-padding;
 }

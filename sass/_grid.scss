@@ -2,6 +2,8 @@
 
 $cols: 13;
 $break-sm: 600px;
+$break-md: 800px;
+$break-lg: 1150px;
 
 $section-padding: 5rem;
 $inner-padding: 2rem;
@@ -13,10 +15,6 @@ $susy: (
 );
 
 %grid-half {
-  &:not(:last-child) {
-    margin-bottom: 2 * $inner-padding;
-  }
-
   @include breakpoint ($break-sm) {
     @include span($cols/2);
 
@@ -27,12 +25,24 @@ $susy: (
 }
 
 // hack to come back to which "centers", providing extra padding on left/right
-%grid-half-padded {
-  @extend %grid-half;
+@mixin grid-half-padded ($break-size) {
+  @extend %grid-adjust;
 
-  @include breakpoint ($break-sm) {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not(:last-child) {
+    margin-bottom: $inner-padding;
+  }
+
+  @include breakpoint ($break-size) {
     @include push(1);
     @include span(5);
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -41,4 +51,19 @@ $susy: (
   float: none;
   margin-left: auto;
   margin-right: auto;
+}
+
+%grid-adjust {
+  @include breakpoint ($break-sm) {
+    @include span(80%);
+  }
+
+  @include breakpoint ($break-md) {
+    @include span(60%);
+  }
+
+  @include breakpoint ($break-lg) {
+    @include span(50%);
+
+  }
 }

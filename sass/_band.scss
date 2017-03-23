@@ -22,34 +22,25 @@
 
   &--sub-header {
     @include header(1.5rem, $text-color-blue);
+    padding-bottom: $inner-padding;
     text-align: center;
   }
 
   &--summary {
-    @extend %grid-half;
+    @extend %grid-adjust;
 
     float: none;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 1.5 * $inner-padding;
+    padding-bottom: $inner-padding;
   }
 
   &--body {
-    @extend %grid-half-padded;
+    @include grid-half-padded($break-lg);
 
     p {
       &:not(:last-child) {
         margin-bottom: $inner-padding;
-      }
-    }
-
-    &:not(:last-child) {
-      margin-bottom: $inner-padding;
-    }
-
-    @include breakpoint ($break-sm) {
-      &:not(:last-child) {
-        margin-bottom: 0;
       }
     }
   }
@@ -73,7 +64,7 @@
 }
 
 .band-split {
-  @extend %grid-half-padded;
+  @include grid-half-padded($break-sm);
 }
 
 .centered {
