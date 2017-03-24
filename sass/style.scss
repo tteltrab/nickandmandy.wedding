@@ -131,7 +131,11 @@ main {
 
   &--header {
     @include header(1.5rem, $text-color-blue);
-    text-align: right;
+
+    @include breakpoint ($break-sm) {
+      text-align: right;
+    }
+
   }
 
   &:not(:last-child) {
@@ -140,7 +144,6 @@ main {
 
   @include breakpoint ($break-sm) {
     &--header {
-      @include push(1 of 13);
       @include span(2 of 13);
 
       padding-top: 5px;
@@ -148,7 +151,23 @@ main {
 
     &--content {
       @include push(1 of 13);
+      @include span(10 of 13);
+    }
+  }
+
+  @include breakpoint ($break-md) {
+    &--header {
+      @include push(1 of 13);
+    }
+
+    &--content {
       @include span(8 of 13);
+    }
+  }
+
+  @include breakpoint ($break-lg) {
+    &--content {
+      @include span(6 of 13);
     }
   }
 }
