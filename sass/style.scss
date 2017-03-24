@@ -2,6 +2,7 @@
 @import 'toolkit';
 @import 'breakpoint';
 @import './lightgallery.min.css';
+$transition-duration-short: .2s;
 @import 'colors';
 @import 'lg-overrides';
 @import 'grid';
@@ -100,7 +101,8 @@ main {
       left: 0;
       position: absolute;
       transform: scaleX(0);
-      transition: transform .3s ease-in-out 0s, visibility .3s ease-in-out 0s;
+      transition: transform $transition-duration-short ease-in-out,
+        visibility $transition-duration-short ease-in-out;
       visibility: hidden;
       width: 100%;
     }
@@ -159,7 +161,7 @@ main {
   @extend %grid-two-icon-centered;
   display: block;
   text-align: Center;
-  transition: opacity .3s ease-in-out;
+  transition: opacity $transition-duration-short ease-in-out;
 
   &:hover {
     opacity: .5;
