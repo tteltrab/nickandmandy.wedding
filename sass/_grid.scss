@@ -24,28 +24,6 @@ $susy: (
   }
 }
 
-// hack to come back to which "centers", providing extra padding on left/right
-@mixin grid-half-padded ($break-size) {
-  @extend %grid-adjust;
-
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-
-  &:not(:last-child) {
-    margin-bottom: $inner-padding;
-  }
-
-  @include breakpoint ($break-size) {
-    @include push(1);
-    @include span(5);
-
-    &:not(:last-child) {
-      margin-bottom: 0;
-    }
-  }
-}
-
 // sort of hack to take element out of grid, float, and center it
 %grid-center {
   float: none;
@@ -65,5 +43,47 @@ $susy: (
   @include breakpoint ($break-lg) {
     @include span(50%);
 
+  }
+}
+
+%grid-two-icon-centered {
+  @extend %grid-adjust;
+
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint ($break-sm) {
+    @include span(3 of 6);
+
+    &:nth-child(2n) {
+      text-align: right;
+    }
+
+    &:nth-child(2n + 1) {
+      text-align: left;
+    }
+  }
+}
+
+// hack to come back to which "centers", providing extra padding on left/right
+@mixin grid-half-padded ($break-size) {
+  @extend %grid-adjust;
+
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+
+  &:not(:last-child) {
+    margin-bottom: $inner-padding;
+  }
+
+  @include breakpoint ($break-size) {
+    @include push(1);
+    @include span(5);
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 }

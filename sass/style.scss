@@ -156,8 +156,14 @@ main {
 }
 
 .registry {
+  @extend %grid-two-icon-centered;
   display: block;
   text-align: Center;
+  transition: opacity .3s ease-in-out;
+
+  &:hover {
+    opacity: .5;
+  }
 }
 
 .crate-and-barrel {
