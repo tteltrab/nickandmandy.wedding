@@ -1,10 +1,12 @@
+// libraries
 @import 'toolkit/reset';
 @import 'toolkit';
 @import 'breakpoint';
 @import './lightgallery.min.css';
+// utilities/common use
 $transition-duration-short: .2s;
 @import 'colors';
-@import 'lg-overrides';
+@import 'overrides';
 @import 'grid';
 @import 'header';
 @import 'band';

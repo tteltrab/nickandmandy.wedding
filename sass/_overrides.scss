@@ -1,0 +1,13 @@
+// lightgrid overrides
+.lg-backdrop {
+  background-color: opacify($banner-redish, .2);
+}
+
+// sass-toolkit/reset overrides
+abbr,
+dfn {
+  &[title] {
+    border-bottom: 0;
+    cursor: text;
+  }
+}
