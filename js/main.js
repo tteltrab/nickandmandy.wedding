@@ -1,3 +1,4 @@
-import "./lightgallery.min.js";
-import "./googlemaps.js";
-import "./setup.js";
+import './lightgallery.min';
+
+// initialize lightGallery grid and controls
+lightGallery(document.getElementById('lightGallery'));
